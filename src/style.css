@@ -1,0 +1,78 @@
+body {
+margin: 0;
+background: #f5f0e8;
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Hiragino Kaku Gothic ProN",
+"Yu Gothic",
+sans-serif;
+}
+
+
+.app {
+
+max-width: 480px;
+
+margin: 0 auto;
+
+padding: 20px;
+
+}
+
+
+h1 {
+
+color: #3d2b1f;
+
+}
+
+
+.card {
+
+background: white;
+
+border-radius: 16px;
+
+padding: 16px;
+
+margin-bottom: 14px;
+
+box-shadow:
+0 3px 12px
+rgba(0,0,0,0.08);
+
+}
+
+
+.card h2 {
+
+margin-top:0;
+
+color:#3d2b1f;
+
+}
+
+
+.card p {
+
+color:#555;
+
+}
+
+
+button {
+
+background:#5c8a3c;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+padding:10px 16px;
+
+font-size:14px;
+
+}
