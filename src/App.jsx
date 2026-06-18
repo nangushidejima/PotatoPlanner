@@ -1,30 +1,18 @@
 import { useState } from "react";
 
-export default function App(){
-
-const [name,setName] = useState("田中 一郎");
-
-return (
-
-<div>
-
-<h1>🥔 Potato Planner</h1>
-
-<p>デジマ 生産管理</p>
-
-<h2>{name}</h2>
-
-<button
-onClick={()=>{
-const n = prompt("名前変更");
-if(n) setName(n);
-}}
->
-名前変更
-</button>
-
-</div>
-
-);
-
+const producersData = [
+{
+id: 1,
+name: "田中 一郎",
+phase: "生育期",
+area: "0.5ha",
+harvest: "4500kg"
+},
+{
+id: 2,
+name: "佐藤 花子",
+phase: "生育期",
+area: "0.3ha",
+harvest: "2800kg"
 }
+];
