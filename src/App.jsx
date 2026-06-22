@@ -18,14 +18,16 @@ harvest: "2800kg"
 ];
 
 
-export default function App(){
+export default function App() {
 
 const [producers, setProducers] = useState(producersData);
 
 
-const renameProducer = (id) => {
+function renameProducer(id){
 
-const name = prompt("新しい名前");
+const name = window.prompt(
+"新しい生産者名"
+);
 
 if(!name) return;
 
@@ -33,60 +35,65 @@ if(!name) return;
 setProducers(
 producers.map(p =>
 p.id === id
-? {...p, name}
+? {...p, name:name}
 : p
 )
 );
 
-};
+}
 
 
 return (
 
-<div className="app">
+<div
+style={{
+padding:"20px",
+fontFamily:"sans-serif",
+background:"#f5f0e8",
+minHeight:"100vh"
+}}
+>
 
 <h1>
 🥔 Potato Planner
 </h1>
 
-
-<p>
+<h3>
 デジマ 生産管理
-</p>
+</h3>
 
 
-{
-producers.map(p => (
+{producers.map(p=>(
 
 <div
-className="card"
 key={p.id}
+style={{
+background:"#fff",
+borderRadius:"15px",
+padding:"15px",
+marginBottom:"15px"
+}}
 >
 
 <h2>
 {p.name}
 </h2>
 
-
 <p>
 🌱 {p.phase}
 </p>
 
-
 <p>
-面積 {p.area}
+面積：{p.area}
 </p>
 
-
 <p>
-収穫予定 {p.harvest}
+収穫予定：{p.harvest}
 </p>
 
 
 <button
-onClick={() =>
-renameProducer(p.id)
-}
+onClick={()=>renameProducer(p.id)}
 >
 名前変更
 </button>
@@ -94,8 +101,7 @@ renameProducer(p.id)
 
 </div>
 
-))
-}
+))}
 
 
 </div>
