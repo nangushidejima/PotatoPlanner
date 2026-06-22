@@ -1,10 +1,13 @@
-import React from "react";
+export default function App(){
 
-export default function App() {
 return (
-<div style={{ padding: "20px" }}>
+<div>
+
 <h1>🥔 Potato Planner</h1>
+
 <p>デジマ 生産管理</p>
+
 </div>
-);
+)
+
 }
